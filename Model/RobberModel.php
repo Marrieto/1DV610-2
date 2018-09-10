@@ -1,8 +1,8 @@
 <?php
-    class RobberLanguage 
+    class RobberModel 
     {
         // Shall return a 'translated' input to robber language
-        public function translateInput ($input) {
+        public function returnTranslation ($input) {
             $translatedString = "";
 
             // check if input is empty, if not empty -> translate
@@ -16,7 +16,7 @@
         }
 
         private function Robberify ($character) {
-            $consonentArray = array('B', 'b', 'C', 'c', 'D', 'd', 'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j', 'k', 'K', 'l', 'L', 'M', 'm', 'n', 'N', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T', 'v', 'V', 'W', 'w', 'x', 'X', 'Z', 'z');
+            $consonentArray = array('B', 'b', 'C', 'c', 'D', 'd', 'F', 'f', 'G', 'g', 'H', 'h', 'I', '', 'J', 'j', 'k', 'K', 'l', 'L', 'M', 'm', 'n', 'N', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T', 'v', 'V', 'W', 'w', 'x', 'X', 'Z', 'z');
             if (in_array($character, $consonentArray)) {
                 return $character .= 'o' . $character;
             } else {
